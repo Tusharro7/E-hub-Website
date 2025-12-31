@@ -1,0 +1,14 @@
+/* @import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *)); */
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+
+/* index.css mein */
+@layer base {
+  body {
+    @apply bg-white text-gray-900 dark:bg-slate-950 dark:text-slate-200;
+  }
+}
