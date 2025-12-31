@@ -1,6 +1,6 @@
 import React from 'react'
 import BannerWeb  from  '../../assets/Banners/Webbanner.webp'
-import BannerMobile  from  '../../assets/Banners/Mobilebanner.webp'
+import BannerMobile  from  '../../assets/Banners/MobileBanner.webp'
 const HeroSection = () => {
   return (
  <>
