@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { Link } from 'react-router-dom'
-import MobileImg from './ProductsImage/PhoneImage.webp'
+import MobileImg from './ProductsImage/phoneImage.webp'
 import LaptopImg from './ProductsImage/LaptopImage.webp'
 import SmartWatchImg from './ProductsImage/SmartWatch.webp'
 import SoundImg from './ProductsImage/Sounds.webp'

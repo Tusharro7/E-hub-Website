@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom' // 👈 CHANGE 1: Link Import kiya
 import { allProducts } from './../../data/ProductsData'
