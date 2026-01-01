@@ -68,7 +68,7 @@ const CategoryProducts = () => {
                             {
                                 item.oldPrice && (
                                     <span
-                                        className='text-gray-900 font-normal     dark:text-gray-300 opacity-60 line-clamp-1 text-sm line-through '>₹{item.oldPrice}
+                                        className='text-gray-900 font-normal     dark:text-gray-300 opacity-60 line-clamp-1 text-sm line-through '>₹{item.oldPrice}/-
                                     </span>
                                 )
                             }
