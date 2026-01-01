@@ -44,7 +44,7 @@ const CategoryProducts = () => {
             </h1>
 
             {/* --- GRID VIEW --- */}
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8'>
                 {currentProducts.map((item) => (
 
 
@@ -54,21 +54,23 @@ const CategoryProducts = () => {
                         className='bg-white dark:bg-gray-900 p-5 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group block'
                     >
                         {/* Image container */}
-                        <div className='h-48 w-full bg-gray-50 dark:bg-gray-800 rounded-xl flex items-center justify-center mb-4 overflow-hidden'>
+                        <div className='md:h-48 w-full bg-gray-50 dark:bg-gray-800 rounded-xl flex items-center justify-center mb-4 overflow-hidden'>
                             <img
                                 src={item.image}
                                 alt={item.name}
-                                className='h-40 w-full object-contain mix-blend-multiply dark:mix-blend-normal group-hover:scale-110 transition-transform duration-500'
+                                className='h-40 w-full object-contain mix-blend-multiply dark:mix-blend-normal group-hover:scale-110 transition-transform duration-500 p-2 md:p-0 '
                             />
                         </div>
 
                         <h3 className='font-semibold text-lg truncate dark:text-white mb-1'>{item.name}</h3>
-                        <p className='text-slate-700 dark:text-gray-300 font-bold text-sm md:text-xl flex justify-between items-center '>₹{item.price.toLocaleString()}/-
+                        <p className='text-slate-700 dark:text-gray-300 font-bold gap-2 md:text-lg flex-col-reverse md:mb-0 flex md:flex-row md:items-center md:justify-between'>
+                            
+                            ₹{item.price.toLocaleString()}/-
 
                             {
                                 item.oldPrice && (
                                     <span
-                                        className='text-gray-900 font-normal     dark:text-gray-300 opacity-60 line-clamp-1 text-sm line-through '>₹{item.oldPrice} /-
+                                        className='text-gray-900 font-normal  text-right dark:text-gray-300 opacity-60 line-clamp-1 text-sm line-through '>₹{item.oldPrice} /-
                                     </span>
                                 )
                             }
