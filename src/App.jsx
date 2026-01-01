@@ -146,7 +146,7 @@ function App() {
             <Route path="/search/:term" element={<SearchResults />} />
             <Route path='/Category/:categoryName' element={<CategoryProducts/>} />
             <Route path='/Product/:productName' element={<ProductInformation/>} />
-            <Route path='Profile' element={<Profile />} />
+            <Route path='/Profile' element={<Profile />} />
             <Route path='Cart' element={<Cart />} />
             <Route path='*' element={<Error404 />} />
           </Routes>
