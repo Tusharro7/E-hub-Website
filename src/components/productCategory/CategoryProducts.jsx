@@ -63,7 +63,7 @@ const CategoryProducts = () => {
                         </div>
 
                         <h3 className='font-semibold text-lg truncate dark:text-white mb-1'>{item.name}</h3>
-                        <p className='text-slate-700 dark:text-gray-300 font-bold text-xl flex justify-between items-center '>₹{item.price.toLocaleString()}/-
+                        <p className='text-slate-700 dark:text-gray-300 font-bold text-sm md:text-xl flex justify-between items-center '>₹{item.price.toLocaleString()}/-
 
                             {
                                 item.oldPrice && (
