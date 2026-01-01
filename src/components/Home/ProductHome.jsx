@@ -22,7 +22,6 @@ function ProductHome() {
           <Link 
             to={item.path} 
             key={index}
-            // "group" class hover effect ke liye zaroori hai
             className='group block bg-white dark:bg-gray-900 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 dark:border-gray-800 overflow-hidden transition-all duration-300'
           >
               {/* --- IMAGE CONTAINER --- */}

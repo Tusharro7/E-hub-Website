@@ -15,10 +15,8 @@ import {
 
 import { toast } from 'react-toastify';
 import { FcGoogle } from 'react-icons/fc';
-// 1. FiArrowLeft import kiya "Back" button ke liye
 import { FiLogOut, FiUser, FiPackage, FiMapPin, FiSettings, FiMail, FiLock, FiArrowLeft } from 'react-icons/fi';
 
-// 2. Components Import kiye (Make sure ye files bani ho)
 import MyOrders from '../components/MyOrders';
 import Address from '../components/Address';
 import Settings from '../components/Settings';
@@ -27,10 +25,8 @@ const Profile = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // 3. Tab State Banaya (Default 'dashboard' rahega)
   const [activeTab, setActiveTab] = useState('dashboard');
 
-  // --- FORM STATES ---
   const [isSignup, setIsSignup] = useState(false); 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -44,7 +40,6 @@ const Profile = () => {
     return () => unsubscribe();
   }, []);
 
-  // --- AUTH HANDLER ---
   const handleAuth = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -72,7 +67,6 @@ const Profile = () => {
     setLoading(false);
   };
 
-  // --- 4. IMPROVED FORGOT PASSWORD (With Logs) ---
   const handleForgotPassword = async () => {
     if (!email) {
       toast.warn("Please enter your Email first! 📧");
@@ -119,7 +113,6 @@ const Profile = () => {
         return <Settings />;
       default:
         return (
-          // DASHBOARD GRID (Buttons with onClick)
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fadeIn">
             
             <div onClick={() => setActiveTab('orders')} className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition cursor-pointer flex items-center gap-4">
@@ -151,7 +144,6 @@ const Profile = () => {
     }
   };
 
-  // --- UI PART: LOGIN FORM (No User) ---
   if (!user) {
     return (
       <div className="min-h-[80vh] flex items-center justify-center bg-gray-50 dark:bg-gray-900 px-4 py-10">
@@ -236,7 +228,6 @@ const Profile = () => {
     );
   }
 
-  // --- UI PART: LOGGED IN DASHBOARD ---
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 p-4 md:p-10">
       <div className="max-w-4xl mx-auto">
@@ -259,7 +250,6 @@ const Profile = () => {
           </button>
         </div>
 
-        {/* 6. Back Button (Sirf tab open hone par dikhega) */}
         {activeTab !== 'dashboard' && (
           <button 
             onClick={() => setActiveTab('dashboard')}
@@ -269,7 +259,6 @@ const Profile = () => {
           </button>
         )}
 
-        {/* 7. Dynamic Content (Jo activeTab hoga wahi dikhega) */}
         <div className='w-full'>
            {renderTabContent()}
         </div>
